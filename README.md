@@ -23,8 +23,8 @@ sudo docker run -d -p 5000:5000 genclf
 The model runs on http://localhost:5000/, you can test inference by performing a POST API request to http://localhost:5000/predict with a JSON payload like
 ```json
 {
-"title": "insert title here"
-"description": "insert description here"
+    "title": "insert title here",
+    "description": "insert description here"
 }
 ```
 e.g., with curl
