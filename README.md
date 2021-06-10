@@ -31,8 +31,16 @@ e.g., with curl
 ```bash
 curl --location --request POST 'http://localhost:5000/predict' --header 'Content-Type: application/json' --data-raw '{"title": "insert your title here", "description": "insert description here"}'
 ```
-example:
+curl example:
 ```bash
 curl --location --request POST 'http://localhost:5000/predict' --header 'Content-Type: application/json' --data-raw '{"title": "The Super Pickle Model", "description": "An amazing Pickle model with super powers fights every machine learning problem!"}'
 {"title": "The Super Pickle Model", "description": "An amazing Pickle model with super powers fights every machine learning problem!", "genre": "Animation, Comedy, Family, Adventure"}
  ```
+python3 example:
+```python
+import requests, json
+payload = {"title": "python requests", "description": "menacing python with restless killing instinct"}
+resp = requests.post("http://localhost:5000/predict", json = payload)
+resp.json()
+{'title': 'python requests', 'description': 'menacing python with restless killing instinct', 'genre': 'Comedy'}
+```
