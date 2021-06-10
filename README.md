@@ -13,11 +13,11 @@ cd movie_genre_classifier/code/
 ```
 build the container
 ```bash
-sudo docker build -t genclf .
+(sudo) docker build -t genclf .
 ```
 run the container and publish port 5000 (model app runs on port 5000)
 ```bash
-sudo docker run -d -p 5000:5000 genclf
+(sudo) docker run -d -p 5000:5000 genclf
 ```
 ## Testing
 The model runs on http://localhost:5000/, you can test inference by performing a POST API request to http://localhost:5000/predict with a JSON payload like
