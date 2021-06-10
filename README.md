@@ -38,7 +38,7 @@ curl --location --request POST 'http://localhost:5000/predict' --header 'Content
  ```
 python3 example:
 ```python
-import requests, json
+import requests
 payload = {"title": "python requests", "description": "menacing python with restless killing instinct"}
 resp = requests.post("http://localhost:5000/predict", json = payload)
 resp.json()
